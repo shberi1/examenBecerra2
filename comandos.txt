@@ -1,0 +1,3 @@
+1. crea las carpetas src, docs y data con un solo comando.
+2. crea el archivo src/index.html con el texto <h1>Hola</h1> dentro, con un solo comando.
+3. colócate en la carpeta docs y, desde ahí, copia src/index.html a la carpeta data con el nombre copia.txt.
