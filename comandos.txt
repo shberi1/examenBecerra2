@@ -1,11 +1,109 @@
-mkdir examenBecerra2
-echo "Shirley Becerra" >> README.md
+
+mkdir examenBecerra
+echo “Shirley Becerra” >> readme.md
 touch comandos.txt
 
+git remote add origin https://github.com/shberi1/examenBecerra2.git
+
+git branch desarrollo
+git checkout desarrollo
+ 
 mkdir src docs data
-echo "<h1>Hola</h1>" > src/index.html
+echo “<h1>Hola</h1>” >> src/index.html
+git add .
+git commit -m “…”
+
 cd docs
 cp ../src/index.html ../data/copia.txt
-cd ..
 
+cd ..
+git add .
+git commit -m “…”
+
+git branch bug
+git checkout bug
+echo “mi lenguaje de programación favorito es php” >>  README.md
+git add .
+git commit -m “…”
+
+git checkout desarrollo
+git merge bug
+git checkout master
+git merge desarrollo
+
+git tag v1
+git push origin master
+
+git branch
+git tag
+
+cd ..
+mkdir examenBecerra2Clonado
+cd examenBecerra2Clonado
+git clone https://github.com/shberi1/examenBecerra2.git .
+
+cd ..
+cd examenBecerra2
+echo “Mi serie favorita es Interestelar" >> README.md
+git add .
+git commit -m "Linea de texto de mi Serie favorita en README.md"
+git push origin
+
+cd ..
+cd examenBecerra2Clonado
+echo "Mi videojuego favorito es Sudoku" >> README.md
+git add .
+git commit -m "Linea de texto de mi Serie favorita en README.md"
+
+git fetch origin
+git merge origin/master
+cat README.md
+
+nano README.md (borro unicamente los marcadores de git)
+git add .
+git commit -m "conflicto resuelto en README.md, conservo ambas lineas.”
+git push origin
+
+cd ..
+cd examenBecerra2
+git fetch origin
+git merge origin/master
+
+mkdir docs/manuales
+cd docs/manuales
+
+touch ../../login.txt
+
+
+cd ..
+cd ..
+git add .
+git commit -m "creacion de manuales dentro de docs y de fichero login.txt dentro de examenBecerra2"
+
+cd docs/manuales
+rm -r ../../data
+
+cd ..
+cd ..
+git add .
+git commit -m "se elimina directorio data con todo su contenido."
+
+cd docs/manuales
+mv ../../src/index.html . ayuda.html
+
+cd ..
+cd ..
+git add .
+git commit -m "se mueve index.html a manuales con nombre ayuda.html."
+
+ls -R > docs/estructura.txt
+
+cd ..
+git add .
+git commit -m "creacion de fichero estructura.txt con el listado recursivo de la carpeta raiz."
+
+git checkout master
+git merge desarrollo2
+git tag v2
+git push origin master 
 
